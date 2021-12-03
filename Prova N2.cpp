@@ -30,7 +30,6 @@ void preencher(int n, int *cod,  rede *gs){
         gs[i].it=(rand()%3);
         gs[i].rd=rand()%2;
         gs[i].conAno=(rand()%18)+6;
-
         gs[i].conMes=gs[i].conAno/12;
         gs[i].conMor=gs[i].conMes/gs[i].moradores;
 
@@ -145,7 +144,7 @@ void q_6(int n, float *percNR, float *percPR, rede *gs){
 
 void apresentar(int n, int *cod, float *mediaConsPos, float *percIndf, float *percNR, float *percPR, rede *gs){
     for(int i=0;i<n;i++){
-        printf("%s\t%s\t%s\t%d\t%s\t%s\t%.1f\t%.1f\n", gs[i].codigo, gs[i].regiao, gs[i].tipo, gs[i].moradores, gs[i].inter, gs[i].red, gs[i].conMes, gs[i].conMor);
+        printf("%s\t%s\t%s\t%d\t%s\t%s\t%.1f\t\t%.1f\n", gs[i].codigo, gs[i].regiao, gs[i].tipo, gs[i].moradores, gs[i].inter, gs[i].red, gs[i].conMes, gs[i].conMor);
     }
     printf("O consumo medio dos pesquisados com interesse positivo: %.1f\n", *mediaConsPos);
     printf("Percentual de pesquisados indiferentes a implantacao: %.1f%%\n", *percIndf);
@@ -182,6 +181,7 @@ void grava(int n, int *cod, float *mediaConsPos, float *percIndf, float *percNR,
 }
 
 int main(){
+    printf("Codigo          Regiao            Tipo     nO Moradores  Interesse     Rede  Consumo Mes   Consumo Morador\n");
     rede gs[105]={0};
     int cod;
     float mediaConsPos, percIndf, percNR, percPR;
