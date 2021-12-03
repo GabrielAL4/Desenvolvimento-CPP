@@ -29,7 +29,6 @@ void preencher(int n, int *cod,  rede *gs){
         gs[i].moradores=(rand()%6)+1;
         gs[i].it=(rand()%3);
         gs[i].rd=rand()%2;
-        printf("%d", gs[i].rd);
         gs[i].conAno=(rand()%18)+6;
 
         gs[i].conMes=gs[i].conAno/12;
@@ -87,6 +86,7 @@ void preencher(int n, int *cod,  rede *gs){
         if(gs[i].rd==1){
             sprintf(gs[i].red, "Nao");  
         }
+
     }
 }
 q_3(int n, float *mediaConsPos, rede *gs){
@@ -151,15 +151,10 @@ void apresentar(int n, int *cod, float *mediaConsPos, float *percIndf, float *pe
     printf("Percentual de pesquisados indiferentes a implantacao: %.1f%%\n", *percIndf);
     printf("O percentual de pesquisados negativos que tem rede instalada: %.1f%%\n", *percNR);
     printf("O percentual de pesquisados positivos que nao tem rede instalada: %.1f%%\n", *percPR);
-}
-
-void apresentarMenor(int n, rede *gs){
-    for(int i=0;i<n;i++){
-        
-    }
     printf("O pesquisado de menor consumo com todos os seus dados: \n");
     printf("%s\t%s\t%s\t%d\t%s\t%s\t%.1f\t%.1f\n", menorC.codigo, menorC.regiao, menorC.tipo, menorC.moradores, menorC.inter, menorC.red, menorC.conMes, menorC.conMor);
 }
+
 
 void grava(int n, int *cod, float *mediaConsPos, float *percIndf, float *percNR, float *percPR, rede *gs){
     FILE *save_arq;
@@ -173,14 +168,15 @@ void grava(int n, int *cod, float *mediaConsPos, float *percIndf, float *percNR,
     for(i=0;i<n;i++){
         fprintf(save_arq, "%s\t%s\t%s\t%d\t%s\t%s\t%.1f\t%.1f\n", gs[i].codigo, gs[i].regiao, gs[i].tipo, gs[i].moradores, gs[i].inter, gs[i].red, gs[i].conMes, gs[i].conMor);
     }
-    fprintf(save_arq,"O consumo medio dos pesquisados com interesse positivo: %.1f\n", *mediaConsPos);
-    fprintf(save_arq,"Percentual de pesquisados indiferentes a implantacao: %.1f%%\n", *percIndf);
-    fprintf(save_arq,"O percentual de pesquisados negativos que tem rede instalada: %.1f%%\n", *percNR);
-    fprintf(save_arq,"O percentual de pesquisados positivos que nao tem rede instalada: %.1f%%\n", *percPR);
+    fprintf(save_arq,"O consumo medio dos pesquisados com interesse positivo: %.1f\n", mediaConsPos);
+    fprintf(save_arq,"Percentual de pesquisados indiferentes a implantacao: %.1f%%\n", percIndf);
+    fprintf(save_arq,"O percentual de pesquisados negativos que tem rede instalada: %.1f%%\n", percNR);
+    fprintf(save_arq,"O percentual de pesquisados positivos que nao tem rede instalada: %.1f%%\n", percPR);
     fprintf(save_arq,"=================================================================================================================================\n");
     fprintf(save_arq,"O pesquisado de menor consumo com todos os seus dados: \n");
     fprintf(save_arq,"%s\t%s\t%s\t%d\t%s\t%s\t%.1f\t%.1f\n", menorC.codigo, menorC.regiao, menorC.tipo, menorC.moradores, menorC.inter, menorC.red, menorC.conMes, menorC.conMor);
 
+    
     fclose(save_arq);
     printf("Dados salvos no arquivo |DadosRedeGas.txt|");
 }
@@ -196,7 +192,6 @@ int main(){
     q_5(105, &percIndf, gs);
     q_6(105, &percNR, &percPR, gs);
     apresentar(105, &cod, &mediaConsPos, &percIndf, &percNR, &percPR, gs);
-    apresentarMenor(105, gs);
     grava(105, &cod, &mediaConsPos, &percIndf, &percNR, &percPR, gs);
 
     return 0;
