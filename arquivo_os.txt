@@ -1,0 +1,54 @@
+=====================================================================================
+OS1814M		Manutencao  	29/10		69	7400.0
+OS1988M		Manutencao  	7/8		97	10200.0
+OS1875M		Manutencao  	27/8		61	6600.0
+OS1057M		Manutencao  	30/10		77	8200.0
+OS1077M		Manutencao  	11/8		95	10000.0
+OS1618R		  Reparo    	15/8		64	10350.0
+OS1256R		  Reparo    	12/10		28	4950.0
+OS2000R		  Reparo    	24/9		75	12000.0
+OS1863M		Manutencao  	8/10		57	6200.0
+OS1802M		Manutencao  	30/9		51	5600.0
+OS1143R		  Reparo    	10/10		64	10350.0
+OS1057R		  Reparo    	15/9		75	12000.0
+OS1554M		Manutencao  	12/10		91	9600.0
+OS1326M		Manutencao  	8/9		48	5300.0
+OS1484M		Manutencao  	3/9		88	9300.0
+OS1652R		  Reparo    	17/10		77	12300.0
+OS1785M		Manutencao  	16/9		85	9000.0
+OS1792M		Manutencao  	7/8		38	4300.0
+OS1973R		  Reparo    	16/9		71	11400.0
+OS1472R		  Reparo    	16/8		49	8100.0
+OS1721M		Manutencao  	19/10		72	7700.0
+OS1404M		Manutencao  	27/8		62	6700.0
+OS1287R		  Reparo    	18/10		65	10500.0
+OS1817M		Manutencao  	22/10		40	4500.0
+OS1195M		Manutencao  	6/9		70	7500.0
+OS1148M		Manutencao  	30/8		54	5900.0
+OS1413M		Manutencao  	13/10		71	7600.0
+OS1849M		Manutencao  	28/9		90	9500.0
+OS1803M		Manutencao  	9/10		59	6400.0
+OS1804R		  Reparo    	5/9		74	11850.0
+OS1829M		Manutencao  	10/8		52	5700.0
+OS1658R		  Reparo    	25/8		72	11550.0
+OS1306R		  Reparo    	2/9		27	4800.0
+OS1768R		  Reparo    	1/9		53	8700.0
+OS1621R		  Reparo    	1/8		72	11550.0
+OS1107R		  Reparo    	19/8		68	10950.0
+OS1449M		Manutencao  	7/10		62	6700.0
+OS1419R		  Reparo    	23/8		23	4200.0
+OS1974M		Manutencao  	10/10		52	5700.0
+OS1905R		  Reparo    	21/10		93	14700.0
+OS1078M		Manutencao  	9/8		40	4500.0
+OS1866M		Manutencao  	3/8		23	2800.0
+=====================================================================================
+O percentual de empresas com quantidade de horas menor que 40 foi de: 11%
+=====================================================================================
+A media de horas das OS de Manutencao foram de: 64.0
+A media de horas das OS de Reparo foram de: 61.0
+A media de horas das OS totais foram de: 63.0
+=====================================================================================
+                           OS de maior valor 
+OS1905R		  Reparo    	21/10		93	14700.0
+=====================================================================================
+Dados gravados com sucesso!
